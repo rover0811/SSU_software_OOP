@@ -3,9 +3,9 @@ public class Num12_2 {
     public static void main(String[] args) {
         Scanner scanner=new Scanner(System.in);
         System.out.print("연산>>");
-        float firstNum= scanner.nextInt();
+        float firstNum= scanner.nextFloat();
         String operator = scanner.next();
-        float secNum= scanner.nextInt();
+        float secNum= scanner.nextFloat();
         float result=0;
         switch(operator){
             case ("+"):
@@ -18,10 +18,12 @@ public class Num12_2 {
                 result=firstNum*secNum;
                 break;
             case ("/"):
+                if(secNum==0) {System.out.println("0으로 나눌 수 없습니다");break;}
                 result=firstNum/secNum;
                 break;
         }
-        System.out.println(firstNum+operator+secNum+"의 계산결과는 "+result);
+
+        if(secNum!=0)System.out.println(firstNum+operator+secNum+"의 계산결과는 "+result);
 
     }
 }

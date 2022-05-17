@@ -8,6 +8,7 @@ public class Num02 {
         int ten=number/10;
         int one=number%10;
         if (ten==one) System.out.println("Yes! 10의 자리와 1의 자리가 같습니다.");
+        else System.out.println("No! 10의 자리와 1의 자리가 다릅니다.");
 
 
     }

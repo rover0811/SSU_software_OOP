@@ -17,7 +17,9 @@ public class Num08 {
         for(int i=0;i<4;i++){
             if(inRect(xarray[i],yarray[i],100,100,200,200)==true) checker++;
         }
-        if(checker>0) System.out.println("충돌합니다");
+        if(checker==4) System.out.println("충돌하지 않습니다");// 점 4개가 포함된 경우는 충돌하지 않는다고 간주(충돌의 정의의 모호함)
+        else if(checker<=3&&checker>=1) System.out.println("충돌합니다");//점 1개 혹은 점 4개가 걸친 경우는 충돌이라고 간주
+        else System.out.println("충돌하지 않습니다");//원래 직사각형보다 더 큰 직사각형도 20행과 같이 충돌하지 않는다고 간주
     }
     public static boolean inRect(int x,int y,int rectx1,int recty1,int rectx2,int recty2){
         if((x>=rectx1&&x<=rectx2)&&(y>=recty1&&y<=recty2))

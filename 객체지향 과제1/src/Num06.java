@@ -3,6 +3,7 @@ public class Num06 {
     public static void main(String[] args) {
         //369게임
         Scanner scanner=new Scanner(System.in);
+        System.out.println("1~99 사이의 정수를 입력하세요");
         int number= scanner.nextInt();
         int tennumber=number/10;
         int onenumber=number%10;
